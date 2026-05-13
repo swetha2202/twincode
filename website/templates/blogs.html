@@ -12,68 +12,26 @@
 </section>
 
 <!-- BLOG GRID -->
+<!-- BLOG GRID -->
 <section class="blogs-section">
     <div class="blogs-grid">
 
+        {% for blog in blogs %}
         <article class="blog-card">
-            <div class="blog-tag">SEO</div>
-            <h3>10 SEO Strategies to Boost Your Rankings in 2026</h3>
-            <p>Discover the latest techniques to improve your search engine rankings and drive more organic traffic to your website this year.</p>
+            {% if blog.image %}
+            <img src="{{ blog.image.url }}" alt="{{ blog.title }}" style="width:100%;border-radius:12px;margin-bottom:12px;">
+            {% endif %}
+            <div class="blog-tag">{{ blog.tag }}</div>
+            <h3>{{ blog.title }}</h3>
+            <p>{{ blog.description }}</p>
             <div class="blog-meta">
-                <span>Jan 15, 2026</span>
-                <a href="#" class="link-arrow">Read More →</a>
+                <span>{{ blog.date }}</span>
+                <span>{{ blog.read_time }}</span>
             </div>
         </article>
-
-        <article class="blog-card">
-            <div class="blog-tag">Content</div>
-            <h3>Why Content Marketing is the Backbone of Digital Success</h3>
-            <p>Learn how high-quality, consistent content builds trust, drives traffic, and converts visitors into loyal long-term customers.</p>
-            <div class="blog-meta">
-                <span>Feb 3, 2026</span>
-                <a href="#" class="link-arrow">Read More →</a>
-            </div>
-        </article>
-
-        <article class="blog-card">
-            <div class="blog-tag">Lead Gen</div>
-            <h3>The Ultimate Guide to Lead Generation in 2026</h3>
-            <p>From landing pages to email funnels — everything you need to know about capturing and converting high-quality leads.</p>
-            <div class="blog-meta">
-                <span>Mar 12, 2026</span>
-                <a href="#" class="link-arrow">Read More →</a>
-            </div>
-        </article>
-
-        <article class="blog-card">
-            <div class="blog-tag">Branding</div>
-            <h3>Building Brand Trust in a Competitive Digital Landscape</h3>
-            <p>Trust is currency in digital marketing. Here's how to earn, maintain, and leverage it for sustainable long-term growth.</p>
-            <div class="blog-meta">
-                <span>Apr 1, 2026</span>
-                <a href="#" class="link-arrow">Read More →</a>
-            </div>
-        </article>
-
-        <article class="blog-card">
-            <div class="blog-tag">Analytics</div>
-            <h3>Data-Driven Marketing: How to Make Better Decisions</h3>
-            <p>Stop guessing and start growing. We show you how to use analytics to fine-tune your marketing for maximum ROI.</p>
-            <div class="blog-meta">
-                <span>Apr 20, 2026</span>
-                <a href="#" class="link-arrow">Read More →</a>
-            </div>
-        </article>
-
-        <article class="blog-card">
-            <div class="blog-tag">Social Media</div>
-            <h3>Social Media Trends That Will Define 2026</h3>
-            <p>Short-form video, AI-generated content, and community-first strategies — what's shaping social media this year.</p>
-            <div class="blog-meta">
-                <span>May 5, 2026</span>
-                <a href="#" class="link-arrow">Read More →</a>
-            </div>
-        </article>
+        {% empty %}
+        <p style="color: var(--text-secondary);">No blogs posted yet.</p>
+        {% endfor %}
 
     </div>
 </section>
