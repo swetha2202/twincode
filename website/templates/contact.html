@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block title %}Contact — TwinCode Digital Agency{% endblock %}
+{% block content %}
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="page-hero-content">
+        <div class="section-label">Get in Touch</div>
+        <h1>Connect with<br><em>TwinCode</em></h1>
+        <p>Ready to grow your brand? Our team is here to guide your digital marketing journey from day one.</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section">
+    <div class="contact-inner">
+
+        <!-- Left: Info -->
+        <div class="contact-info">
+            <h2>Reach Out <span style="background:linear-gradient(135deg,var(--blue),var(--orange-lt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Today</span></h2>
+            <p>We'd love to hear from you! Whether you have questions, need assistance, or want to collaborate, our team is ready to help.</p>
+
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                    <h4>Phone</h4>
+                    <p>+91 6282688275</p>
+                    <p>+91 9496882547</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <h4>Email</h4>
+                    <p>ttwincode@gmail.com</p>
+                </div>
+            </div>
+        <div class="contact-item">
+                <div class="contact-icon">💬</div>
+                <div>
+                      <h4>WhatsApp</h4>
+                    <p>
+                       <a href="https://wa.me/919292217145" target="_blank" class="whatsapp-link">
+                        +91 9292217145
+                       </a>
+                    </p>
+             </div>
+         </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div>
+                    <h4>Instagram</h4>
+                    <p>@twincode.digital</p>
+                </div>
+            </div>
+        </div>
+
+            
+
+        <!-- Right: Form -->
+        <div class="contact-form-wrap">
+            <form class="contact-form" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Smith" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your project and goals..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">
+                    <span>Send Message</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                </button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

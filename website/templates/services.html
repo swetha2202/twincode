@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block title %}Services — TwinCode Digital Agency{% endblock %}
+{% block content %}
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="page-hero-content">
+        <div class="section-label">Our Expertise</div>
+        <h1>Unlock Your<br><em>Digital Potential</em></h1>
+        <p>Comprehensive digital marketing services built to grow your brand, drive leads, and deliver measurable ROI.</p>
+    </div>
+</section>
+
+<!-- SERVICES OVERVIEW CARDS -->
+<section class="services-section" style="padding-top:60px;">
+    <div class="services-grid" style="margin-bottom:0;">
+        <div class="service-card">
+            <div class="service-icon">📈</div>
+            <h3>SEO Services</h3>
+            <p>Dominate search rankings with data-backed SEO strategies that attract organic, high-intent traffic to your business.</p>
+            <a href="#seo" class="link-arrow">Learn More →</a>
+        </div>
+        <div class="service-card featured">
+            <div class="service-icon">✍️</div>
+            <h3>Content Marketing</h3>
+            <p>Compelling content strategies that position your brand as an authority and drive lasting customer engagement.</p>
+            <a href="#content" class="link-arrow">Learn More →</a>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🎯</div>
+            <h3>Lead Generation</h3>
+            <p>Precision-targeted campaigns that fill your pipeline with high-quality leads ready to convert into customers.</p>
+            <a href="#leads" class="link-arrow">Learn More →</a>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES DETAIL -->
+<section class="services-detail-section" style="padding-top:80px;">
+
+    <div class="service-detail-card" id="seo">
+        <div class="service-detail-num">01</div>
+        <div class="service-detail-content">
+            <div class="service-detail-icon">📈</div>
+            <h2>SEO Services</h2>
+            <p>Our SEO services focus on optimizing your website's structure, content, and authority to enhance visibility on search engines. We conduct thorough keyword research, competitor analysis, and on-page optimization to ensure your brand stands out and attracts the right audience.</p>
+            <p>From technical audits to link building strategies, we implement a comprehensive approach that delivers sustainable, long-term ranking improvements.</p>
+            <a href="/contact/" class="btn-primary">
+                <span>Get Started</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="service-detail-card reverse" id="content">
+        <div class="service-detail-num">02</div>
+        <div class="service-detail-content">
+            <div class="service-detail-icon">✍️</div>
+            <h2>Content Marketing</h2>
+            <p>Our content marketing services craft engaging and informative content that not only attracts but also retains customers. We develop a comprehensive content strategy that aligns with your brand's voice, ensuring every piece builds trust and authority in your industry.</p>
+            <p>From blog posts and case studies to social media campaigns and video scripts, we produce content that converts across all channels.</p>
+            <a href="/contact/" class="btn-primary">
+                <span>Get Started</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="service-detail-card" id="leads">
+        <div class="service-detail-num">03</div>
+        <div class="service-detail-content">
+            <div class="service-detail-icon">🎯</div>
+            <h2>Lead Generation</h2>
+            <p>Our lead generation services create effective funnels that attract and convert potential customers. We utilize various channels — email marketing, social media advertising, and landing page optimization — to generate and nurture leads, ensuring a steady flow of prospects.</p>
+            <p>Every campaign is A/B tested and data-optimized to maximize your cost-per-lead and overall conversion rate.</p>
+            <a href="/contact/" class="btn-primary">
+                <span>Get Started</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+    <div class="cta-inner">
+        <div class="cta-percent">93%</div>
+        <div class="cta-text">
+            <h2>Start Your Journey to Online Success Today!</h2>
+            <div class="cta-buttons">
+                <a href="/contact/" class="btn-primary">
+                    <span>Get Started</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="/about/" class="btn-ghost">About Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
