@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Blog
+from django.http import HttpResponse
+from django.contrib.auth.models import User
 
 def home(request):
     return render(request, 'index.html')
@@ -16,3 +18,9 @@ def blogs(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def create_admin(request):
+    if not User.objects.filter(username='admin').exists():
+        User.objects.create_superuser('admin', 'admin@twincode.com', 'admin123')
+        return HttpResponse('Superuser created!')
+    return HttpResponse('Already exists!')
